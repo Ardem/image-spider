@@ -1,0 +1,23 @@
+<!ENTITY imageparams.firstTitle "Image Spider">
+<!ENTITY imageparams.firstSettings "Options">
+<!ENTITY imageparams.view.key "S">
+
+<!ENTITY imageparams.about "About">
+<!ENTITY imageparams.about.title "About Image Spider">
+<!ENTITY imageparams.about.date "Date">
+<!ENTITY imageparams.about.author "Author">
+
+<!ENTITY imageparams.tooltips.title "Tooltips options">
+<!ENTITY imageparams.settings.color "Font color">
+<!ENTITY imageparams.settings.bg "Background color">
+<!ENTITY imageparams.settings.tool "Border color">
+<!ENTITY imageparams.settings.size "Font size">
+<!ENTITY imageparams.settings.opacity "Opacity">
+
+<!ENTITY imageparams.images.title "Image options">
+<!ENTITY imageparams.borders.show "Show border">
+<!ENTITY imageparams.borders.two "for all images">
+<!ENTITY imageparams.borders.one "for current image">
+<!ENTITY imageparams.settings.border.color "Border color">
+
+<!ENTITY imageparams.options.reset "Default options">

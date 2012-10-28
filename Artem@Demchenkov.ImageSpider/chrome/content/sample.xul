@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+ * LICENSE *
+ * The Developer of the Code is
+ * Artem Demchenkov (lunoxot@mail.ru)
+ *
+-->
+
+<?xml-stylesheet href="chrome://imageparams/skin/ourskins.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://imageparams/locale/spider.dtd">
+
+<overlay id="imageparams" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+    <script type="application/x-javascript" src="chrome://imageparams/content/settings/settings.js"/>	
+    <script type="application/x-javascript" src="chrome://imageparams/content/function.js"/>
+	
+    <keyset id="mainKeyset">
+	<key id="imageparams_key" key="&imageparams.view.key;" label="&imageparams.firstTitle;" modifiers="alt,shift" oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();"/>
+    </keyset>
+	
+    <toolbar id="nav-bar" customizable="true">
+	<toolbarbutton
+	    id="imageparams"
+	    insertafter="search-container"
+	    tooltiptext="&imageparams.firstTitle;"
+	    orient="horizontal"
+	    oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();">
+	</toolbarbutton>
+    </toolbar>
+	
+    <menupopup id="menu_ToolsPopup">
+	<menu id="menu_imageparams"
+		      label="&imageparams.firstTitle;" insertbefore="javascriptConsole">
+	    <menupopup id="imageparamsMenuPopup" role="menu" onpopupshowing="imagepar.updateImageparPopUp()">
+		<menuitem id="imageparams_taskbar" 
+					  label="&imageparams.firstTitle;"
+					  accesskey="&imageparams.view.key;"
+					  key="imageparams_key" 
+					  type="checkbox"
+					  oncommand="imagepar.toggleImagepar(this)"
+						  />
+		<menuitem id="imageparams_settings" label="&imageparams.firstSettings;" oncommand="imagepar.settings()"/>
+		<menuitem id="imageparams_about" label="&imageparams.about;" oncommand="imagepar.about()"/>
+	    </menupopup>
+	</menu>
+    </menupopup>
+</overlay>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://imageparams/content/settings/settings.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://imageparams/locale/spider.dtd">
+
+<dialog buttons="accept, cancel"
+	id="imageparams_settings"
+	title="&imageparams.firstTitle;. &imageparams.firstSettings;"
+	onload="spiderSettings.read()"
+	ondialogaccept="spiderSettings.save();"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		
+    <script type="application/x-javascript" src="chrome://imageparams/content/settings/settings.js"/>
+    <script type="application/x-javascript" src="chrome://imageparams/content/function.js"/>
+
+    <groupbox>
+	<caption label="&imageparams.tooltips.title;" class="caption"/>
+	<hbox class="caption">
+	    <label control="imageparams_text_color" value="&imageparams.settings.color;:"/>
+	    <colorpicker id="imageparams_text_color" type="button"/>
+	    <spacer class="spacer"/>
+	    <label control="imageparams_bg_color" value="&imageparams.settings.bg;:"/>
+	    <colorpicker id="imageparams_bg_color" type="button"/>
+	    <spacer class="spacer"/>
+	    <label control="imageparams_border_tool_color" value="&imageparams.settings.tool;:"/>
+	    <colorpicker id="imageparams_border_tool_color" type="button"/>
+	</hbox>
+	<hbox class="caption">
+	    <label control="imageparams_text_size" value="&imageparams.settings.size;:"/>
+	    <spacer class="spacer"/>
+	    <menulist id="imageparams_text_size" align="right">
+		<menupopup>
+		    <menuitem value="9" label="9"/>
+		    <menuitem value="10" label="10"/>
+		    <menuitem value="11" label="11"/>
+		    <menuitem value="12" label="12"/>
+		    <menuitem value="13" label="13"/>
+		    <menuitem value="14" label="14"/>
+		</menupopup>
+	    </menulist>
+	</hbox>
+	<hbox class="caption">
+	    <label control="imageparams_text_opacity" value="&imageparams.settings.opacity;:"/>
+	    <spacer class="spacer"/>
+	    <menulist id="imageparams_text_opacity" class="opacity">
+		<menupopup>
+		    <menuitem value="9" label="0.9"/>
+		    <menuitem value="8" label="0.8"/>
+		    <menuitem value="7" label="0.7"/>
+		    <menuitem value="6" label="0.6"/>
+		    <menuitem value="5" label="0.5"/>
+		    <menuitem value="4" label="0.4"/>
+		    <menuitem value="3" label="0.3"/>
+		    <menuitem value="2" label="0.2"/>
+		    <menuitem value="1" label="0.1"/>
+		</menupopup>
+	    </menulist>
+	</hbox>
+    </groupbox>
+    <groupbox>
+	<caption label="&imageparams.images.title;" class="caption"/>
+	<hbox class="caption">
+	    <label control="imageparams_border_color" value="&imageparams.settings.border.color;:"/>
+	    <colorpicker id="imageparams_border_color" type="button"/>
+	</hbox>
+	<hbox class="caption">
+	    <description value="&imageparams.borders.show;:"/>
+	    <menulist id="imageparams_for_borders">
+		<menupopup>
+		    <menuitem value="2" label="&imageparams.borders.two;"/>
+		    <menuitem value="1" label="&imageparams.borders.one;"/>
+		</menupopup>
+	    </menulist>
+	</hbox>
+    </groupbox>
+    <hbox class="caption">
+	<button label="&imageparams.options.reset;" oncommand="spiderSettings.resetOptions();"/>
+    </hbox>
+</dialog>

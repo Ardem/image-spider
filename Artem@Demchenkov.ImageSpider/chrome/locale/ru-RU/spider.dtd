@@ -1,0 +1,23 @@
+﻿<!ENTITY imageparams.firstTitle "Image Spider">
+<!ENTITY imageparams.firstSettings "Настройки">
+<!ENTITY imageparams.view.key "S">
+
+<!ENTITY imageparams.about "О программе">
+<!ENTITY imageparams.about.title "Image Spider">
+<!ENTITY imageparams.about.date "Дата релиза">
+<!ENTITY imageparams.about.author "Автор">
+
+<!ENTITY imageparams.tooltips.title "Настройки подсказок">
+<!ENTITY imageparams.settings.color "Цвет текста">
+<!ENTITY imageparams.settings.bg "Цвет фона">
+<!ENTITY imageparams.settings.tool "Цвет границы">
+<!ENTITY imageparams.settings.size "Размер шрифта">
+<!ENTITY imageparams.settings.opacity "Прозрачность">
+
+<!ENTITY imageparams.images.title "Настройки изображений">
+<!ENTITY imageparams.borders.show "Показывать границы">
+<!ENTITY imageparams.borders.two "для всех изображений">
+<!ENTITY imageparams.borders.one "для текущего изображения">
+<!ENTITY imageparams.settings.border.color "Цвет границы">
+
+<!ENTITY imageparams.options.reset "Настройки по умолчанию">

@@ -1,0 +1,37 @@
+@import url("chrome://global/skin/");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.imageparams_about{
+    margin: 0;
+    padding: 0;
+}
+
+.date{
+    color: #666;
+}
+
+.name{
+    font-size: 18px;
+    font-family:Georgia, Arial, Helvetica, sans-serif;
+    font-style:italic;
+    font-weight:bold;
+}
+
+.link{
+    color: #0000ff;
+}
+
+.title{
+    padding-top:10px;
+}
+
+.title_name{
+    font-weight:bold;
+}
+
+.image_top{
+    background-image:url('chrome://imageparams/skin/plaginname.jpg');
+    background-position:left 3px;
+    background-repeat:no-repeat;
+    padding-left:20px;
+}

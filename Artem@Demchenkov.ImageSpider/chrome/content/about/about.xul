@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://imageparams/content/about/about.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://imageparams/locale/spider.dtd">
+
+<dialog buttons="accept"
+	id="imageparams_about"
+	title="&imageparams.about.title;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <vbox id="imageparams_details">
+	<hbox class="image_top">
+	    <description class="name">&imageparams.firstTitle;</description>
+	    <description class="name">1.2.1</description>
+	</hbox>
+	<hbox class="title">
+	    <description value="&imageparams.about.date;:" class="title_name"/>
+	    <description class="date">20.07.2010</description>
+	</hbox>
+	<hbox class="title">
+	    <description class="title_name" value="&imageparams.about.author;:"/>
+	</hbox>
+	<hbox>
+	    <description>Artem Demchenkov</description>
+	    <description class="link">(lunoxot@mail.ru)</description>
+	</hbox>
+    </vbox>
+</dialog>
