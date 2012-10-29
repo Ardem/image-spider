@@ -30,14 +30,14 @@
 	
     <menupopup id="menu_ToolsPopup">
 	<menu id="menu_imageparams"
-		      label="&imageparams.firstTitle;" insertbefore="javascriptConsole">
+	      label="&imageparams.firstTitle;">
 	    <menupopup id="imageparamsMenuPopup" role="menu" onpopupshowing="imagepar.updateImageparPopUp()">
 		<menuitem id="imageparams_taskbar" 
-					  label="&imageparams.firstTitle;"
-					  accesskey="&imageparams.view.key;"
-					  key="imageparams_key" 
-					  type="checkbox"
-					  oncommand="imagepar.toggleImagepar(this)"
+			  label="&imageparams.firstTitle;"
+			  accesskey="&imageparams.view.key;"
+			  key="imageparams_key" 
+			  type="checkbox"
+			  oncommand="imagepar.toggleImagepar(this)"
 						  />
 		<menuitem id="imageparams_settings" label="&imageparams.firstSettings;" oncommand="imagepar.settings()"/>
 		<menuitem id="imageparams_about" label="&imageparams.about;" oncommand="imagepar.about()"/>
