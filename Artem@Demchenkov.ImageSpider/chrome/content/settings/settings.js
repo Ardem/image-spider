@@ -21,7 +21,7 @@ var spiderSettings=
 	}
 	else
 	{
-	    document.getElementById("imageparams_bg_color").color="#f9fbdd";
+	    document.getElementById("imageparams_bg_color").color="#dddddd";
 	}
 		
 	if(ImageSpider_PrefService.prefHasUserValue("border_color"))
@@ -51,7 +51,7 @@ var spiderSettings=
 	}
 	else
 	{
-	    document.getElementById("imageparams_text_size").value=11;
+	    document.getElementById("imageparams_text_size").value=12;
 	}
 		
 	if(ImageSpider_PrefService.prefHasUserValue("opacity"))
@@ -61,7 +61,7 @@ var spiderSettings=
 	}
 	else
 	{
-	    document.getElementById("imageparams_text_opacity").value=8;
+	    document.getElementById("imageparams_text_opacity").value=7;
 	}
 		
 	if(ImageSpider_PrefService.prefHasUserValue("for_borders"))
@@ -78,11 +78,11 @@ var spiderSettings=
     resetOptions: function()
     {
 	document.getElementById("imageparams_text_color").color="#000000";
-	document.getElementById("imageparams_bg_color").color="#f9fbdd";
+	document.getElementById("imageparams_bg_color").color="#dddddd";
 	document.getElementById("imageparams_border_color").color="#df0404";
 	document.getElementById("imageparams_border_tool_color").color="#000000";
-	document.getElementById("imageparams_text_size").value=11;
-	document.getElementById("imageparams_text_opacity").value=8;
+	document.getElementById("imageparams_text_size").value=12;
+	document.getElementById("imageparams_text_opacity").value=7;
 	document.getElementById("imageparams_for_borders").value=2;
     },
 	

@@ -116,6 +116,7 @@ var imagepar=
 				color:"+font_color+"; \
 				border:1px solid "+border_tool_color+"; \
 				text-align:left;\
+				box-shadow: 0 0 10px rgba(0,0,0,0.5);\
 				position:absolute; \
 				z-index:999;} \
 			";
@@ -145,16 +146,17 @@ var imagepar=
 					ourTitle=where.title; \
 					var outHtml=''; \
 					\
-					if(where.src) outHtml=outHtml+'src: '+where.src+'<br/>'; \
-					if(where.naturalWidth) outHtml=outHtml+'natural width: '+where.naturalWidth+'px;<br/>'; \
-					if(where.naturalHeight) outHtml=outHtml+'natural height: '+where.naturalHeight+'px;<br/>'; \
-					if(where.width) outHtml=outHtml+'width: '+where.width+'px;<br/>'; \
-					if(where.height) outHtml=outHtml+'height: '+where.height+'px;<br/>'; \
-					if(ourAlt) outHtml=outHtml+'alt: '+ourAlt+'<br/>'; \
-					if(ourTitle) outHtml=outHtml+'title: '+ourTitle+'<br/>'; \
-					if(where.id) outHtml=outHtml+'id: '+where.id+'<br/>'; \
-					if(where.className) outHtml=outHtml+'class: '+where.className+'<br/>'; \
-					if(where.border) outHtml=outHtml+'border: '+where.border+'<br/>'; \
+					if(where.src) outHtml=outHtml+'<strong>Src</strong>: '+where.src+';<br/>'; \
+					if(where.align) outHtml=outHtml+'<strong>Align</strong>: '+where.align+';<br/>'; \
+					if(where.naturalWidth) outHtml=outHtml+'<strong>Natural width</strong>: '+where.naturalWidth+'px;<br/>'; \
+					if(where.naturalHeight) outHtml=outHtml+'<strong>Natural height</strong>: '+where.naturalHeight+'px;<br/>'; \
+					if(where.width) outHtml=outHtml+'<strong>Width</strong>: '+where.width+'px;<br/>'; \
+					if(where.height) outHtml=outHtml+'<strong>Height</strong>: '+where.height+'px;<br/>'; \
+					if(ourAlt) outHtml=outHtml+'<strong>Alt</strong>: '+ourAlt+';<br/>'; \
+					if(ourTitle) outHtml=outHtml+'<strong>Title</strong>: '+ourTitle+';<br/>'; \
+					if(where.id) outHtml=outHtml+'<strong>ID</strong>: '+where.id+'<br/>'; \
+					if(where.className) outHtml=outHtml+'<strong>Class</strong>: '+where.className+';<br/>'; \
+					if(where.border) outHtml=outHtml+'<strong>Border</strong>: '+where.border+';<br/>'; \
 					\
 					For_content.innerHTML=outHtml; \
 					divVis=1; \

@@ -26,11 +26,10 @@
 	    <colorpicker id="imageparams_border_tool_color" type="button"/>
 	</hbox>
 	<hbox class="caption">
-	    <label control="imageparams_text_size" value="&imageparams.settings.size;:"/>
-	    <spacer class="spacer"/>
-	    <menulist id="imageparams_text_size" align="right">
+	    <label control="imageparams_text_opacity" value="&imageparams.settings.size;:" class="label"/>
+	    <menulist id="imageparams_text_size">
 		<menupopup>
-		    <menuitem value="9" label="9"/>
+		    <menuitem value="9"  label="9"/>
 		    <menuitem value="10" label="10"/>
 		    <menuitem value="11" label="11"/>
 		    <menuitem value="12" label="12"/>
@@ -40,9 +39,9 @@
 	    </menulist>
 	</hbox>
 	<hbox class="caption">
-	    <label control="imageparams_text_opacity" value="&imageparams.settings.opacity;:"/>
+	    <label control="imageparams_text_opacity" value="&imageparams.settings.opacity;:" class="label"/>
 	    <spacer class="spacer"/>
-	    <menulist id="imageparams_text_opacity" class="opacity">
+	    <menulist id="imageparams_text_opacity">
 		<menupopup>
 		    <menuitem value="9" label="0.9"/>
 		    <menuitem value="8" label="0.8"/>
@@ -64,7 +63,7 @@
 	    <colorpicker id="imageparams_border_color" type="button"/>
 	</hbox>
 	<hbox class="caption">
-	    <description value="&imageparams.borders.show;:"/>
+	    <label control="imageparams_for_borders" value="&imageparams.borders.show;:" class="label"/>
 	    <menulist id="imageparams_for_borders">
 		<menupopup>
 		    <menuitem value="2" label="&imageparams.borders.two;"/>
