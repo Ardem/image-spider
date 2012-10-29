@@ -1,3 +1,9 @@
+/*
+ * LICENSE *
+ * The Developer of the Code is
+ * Artem Demchenkov (lunoxot@mail.ru)
+ *
+ */
 window.addEventListener("load", function() {
     imagepar.init();
 }, false);

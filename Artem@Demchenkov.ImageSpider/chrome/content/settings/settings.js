@@ -1,3 +1,9 @@
+/*
+ * LICENSE *
+ * The Developer of the Code is
+ * Artem Demchenkov (lunoxot@mail.ru)
+ *
+ */
 const ImageSpider_PrefService=Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("ImageSpider_tutorial.");
 
 var spiderSettings=

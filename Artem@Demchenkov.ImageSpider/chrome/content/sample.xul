@@ -6,7 +6,6 @@
  *
 -->
 
-<?xml-stylesheet href="chrome://imageparams/skin/ourskins.css" type="text/css"?>
 <!DOCTYPE window SYSTEM "chrome://imageparams/locale/spider.dtd">
 
 <overlay id="imageparams" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -18,10 +17,11 @@
 	<key id="imageparams_key" key="&imageparams.view.key;" label="&imageparams.firstTitle;" modifiers="alt,shift" oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();"/>
     </keyset>
 	
-    <toolbar id="nav-bar" customizable="true">
+    <toolbar id="addon-bar">
 	<toolbarbutton
 	    id="imageparams"
 	    insertafter="search-container"
+	    image="chrome://imageparams/skin/plaginname.jpg"
 	    tooltiptext="&imageparams.firstTitle;"
 	    orient="horizontal"
 	    oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();">

@@ -3,4 +3,3 @@ locale	imageparams	en-US			chrome/locale/en-US/
 locale	imageparams	ru-RU			chrome/locale/ru-RU/
 skin	imageparams	imageparams/1.0	chrome/skin/
 overlay chrome://browser/content/browser.xul chrome://imageparams/content/sample.xul
-style	chrome://global/content/customizeToolbar.xul	chrome://imageparams/skin/ourskins.css
