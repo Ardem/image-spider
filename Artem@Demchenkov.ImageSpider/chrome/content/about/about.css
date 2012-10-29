@@ -8,6 +8,7 @@
 
 .date{
     color: #666;
+    margin-left: 3px;
 }
 
 .name{
@@ -19,6 +20,7 @@
 
 .link{
     color: #0000ff;
+    margin-left: 3px;
 }
 
 .title{
@@ -30,8 +32,12 @@
 }
 
 .image_top{
-    background-image:url('chrome://imageparams/skin/plaginname.jpg');
+    background-image:url('chrome://imageparams/skin/icon.jpg');
     background-position:left 3px;
     background-repeat:no-repeat;
-    padding-left:20px;
+    padding:10px 0 0 40px;
+}
+
+.image_top vbox{
+    margin-right: 3px;
 }
