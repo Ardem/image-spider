@@ -1,0 +1,23 @@
+<!ENTITY imageparams.firstTitle "Image Spider">
+<!ENTITY imageparams.firstSettings "Einstellungen">
+<!ENTITY imageparams.view.key "S">
+
+<!ENTITY imageparams.about "Über das Programm">
+<!ENTITY imageparams.about.title "Image Spider">
+<!ENTITY imageparams.about.date "Datum">
+<!ENTITY imageparams.about.author "Autor">
+
+<!ENTITY imageparams.tooltips.title "Einstellungen für die Tipps">
+<!ENTITY imageparams.settings.color "Textfarbe">
+<!ENTITY imageparams.settings.bg "Hintergrundfarbe">
+<!ENTITY imageparams.settings.tool "Borderfarbe">
+<!ENTITY imageparams.settings.size "Schriftgröße">
+<!ENTITY imageparams.settings.opacity "Transparenz">
+
+<!ENTITY imageparams.images.title "Einstellungen für die Bildern">
+<!ENTITY imageparams.borders.show "Zeige Grenze">
+<!ENTITY imageparams.borders.two "für alles Bildern">
+<!ENTITY imageparams.borders.one "für aktuelle Bild">
+<!ENTITY imageparams.settings.border.color "Borderfarbe">
+
+<!ENTITY imageparams.options.reset "Standardeinstellungen">
