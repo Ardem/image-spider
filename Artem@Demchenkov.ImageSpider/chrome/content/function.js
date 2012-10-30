@@ -4,6 +4,7 @@
  * Artem Demchenkov (lunoxot@mail.ru)
  *
  */
+
 window.addEventListener("load", function() {
     imagepar.init();
 }, false);
@@ -12,7 +13,12 @@ var imagepar=
 {
     // for all loading pages
 	
-    init: function() {  
+    init: function() { 
+	var nbar = document.getElementById("nav-bar");   
+	var elem = document.getElementById("search-container");   
+	nbar.insertItem("image-spider-navbar-button", elem, null, false);    
+	document.persist("nav-bar", "currentset"); 
+
 	var appcontent = document.getElementById("appcontent");   // browser 
 	if(appcontent)  
 	    appcontent.addEventListener("DOMContentLoaded", imagepar.onPageLoad, true);

@@ -16,17 +16,10 @@
     <keyset id="mainKeyset">
 	<key id="imageparams_key" key="&imageparams.view.key;" label="&imageparams.firstTitle;" modifiers="alt,shift" oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();"/>
     </keyset>
-	
-    <toolbar id="addon-bar">
-	<toolbarbutton
-	    id="imageparams"
-	    insertafter="search-container"
-	    image="chrome://imageparams/skin/plaginname.jpg"
-	    tooltiptext="&imageparams.firstTitle;"
-	    orient="horizontal"
-	    oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();">
-	</toolbarbutton>
-    </toolbar>
+
+    <toolbarpalette id="BrowserToolbarPalette">
+         <toolbarbutton class="toolbarbutton-1" image="chrome://imageparams/skin/plaginname.jpg" id="image-spider-navbar-button" label="&imageparams.firstTitle;" tooltiptext="&imageparams.firstTitle;" type="button" oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();"></toolbarbutton>
+    </toolbarpalette>
 	
     <menupopup id="menu_ToolsPopup">
 	<menu id="menu_imageparams"
