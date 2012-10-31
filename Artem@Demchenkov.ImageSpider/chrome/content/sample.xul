@@ -18,7 +18,7 @@
     </keyset>
 
     <toolbarpalette id="BrowserToolbarPalette">
-         <toolbarbutton class="toolbarbutton-1" image="chrome://imageparams/skin/plaginname.jpg" id="image-spider-navbar-button" label="&imageparams.firstTitle;" tooltiptext="&imageparams.firstTitle;" type="button" oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();"></toolbarbutton>
+         <toolbarbutton class="toolbarbutton-1" image="chrome://imageparams/skin/plaginname.png" id="image-spider-navbar-button" label="&imageparams.firstTitle;" tooltiptext="&imageparams.firstTitle;" type="button" oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();"></toolbarbutton>
     </toolbarpalette>
 	
     <menupopup id="menu_ToolsPopup">

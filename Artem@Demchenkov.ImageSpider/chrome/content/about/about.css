@@ -32,7 +32,7 @@
 }
 
 .image_top{
-    background-image:url('chrome://imageparams/skin/icon.jpg');
+    background-image:url('chrome://imageparams/skin/icon.png');
     background-position:left 3px;
     background-repeat:no-repeat;
     padding:10px 0 0 40px;

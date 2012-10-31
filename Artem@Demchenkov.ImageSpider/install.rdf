@@ -22,7 +22,7 @@
 	<em:name>Image Spider</em:name>
 	<em:description>This extension shows the image parameters, if you move cursor under it</em:description>
 	<em:creator>Artem Demchenkov</em:creator>
-	<em:iconURL>chrome://imageparams/skin/icon.jpg</em:iconURL>
+	<em:iconURL>chrome://imageparams/skin/icon.png</em:iconURL>
 	<em:aboutURL>chrome://imageparams/content/about/about.xul</em:aboutURL>
 	<em:optionsURL>chrome://imageparams/content/settings/settings.xul</em:optionsURL>
     </Description>     
