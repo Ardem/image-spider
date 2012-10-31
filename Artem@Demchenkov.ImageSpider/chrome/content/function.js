@@ -5,6 +5,17 @@
  *
  */
 
+function firstRun(extensions) {
+    	let extension = extensions.get("Artem@Demchenkov.ImageSpider");
+ 
+    	if (extension.firstRun) {
+      		var nbar = document.getElementById("nav-bar");   
+		var elem = document.getElementById("search-container");   
+		nbar.insertItem("image-spider-navbar-button", null, null, false);    
+		document.persist("nav-bar", "currentset"); 
+	}
+}
+
 window.addEventListener("load", function() {
     imagepar.init();
 }, false);
@@ -14,10 +25,10 @@ var imagepar=
     // for all loading pages
 	
     init: function() { 
-	var nbar = document.getElementById("nav-bar");   
-	var elem = document.getElementById("search-container");   
-	nbar.insertItem("image-spider-navbar-button", null, null, false);    
-	document.persist("nav-bar", "currentset"); 
+	if (Application.extensions)
+    		firstRun(Application.extensions);
+	else
+    		Application.getExtensions(firstRun);
 
 	var appcontent = document.getElementById("appcontent");   // browser 
 	if(appcontent)  
