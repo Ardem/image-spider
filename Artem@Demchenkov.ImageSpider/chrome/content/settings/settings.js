@@ -4,7 +4,7 @@
  * Artem Demchenkov (lunoxot@mail.ru)
  *
  */
-const ImageSpider_PrefService=Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("ImageSpider_tutorial.");
+const ImageSpider_PrefService=Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.ImageSpider_tutorial.");
 
 var spiderSettings=
 {		
@@ -12,7 +12,7 @@ var spiderSettings=
     {	
 	if(ImageSpider_PrefService.prefHasUserValue("text_color"))
 	{
-	    var font_color= ImageSpider_PrefService.getComplexValue("text_color", Components.interfaces.nsISupportsString).data;
+	    var font_color = ImageSpider_PrefService.getComplexValue("text_color", Components.interfaces.nsISupportsString).data;
 	    document.getElementById("imageparams_text_color").color=font_color;
 	}
 	else
@@ -22,7 +22,7 @@ var spiderSettings=
 		
 	if(ImageSpider_PrefService.prefHasUserValue("bg_color"))
 	{
-	    var bg_color= ImageSpider_PrefService.getComplexValue("bg_color", Components.interfaces.nsISupportsString).data;
+	    var bg_color = ImageSpider_PrefService.getComplexValue("bg_color", Components.interfaces.nsISupportsString).data;
 	    document.getElementById("imageparams_bg_color").color=bg_color;
 	}
 	else
@@ -32,7 +32,7 @@ var spiderSettings=
 		
 	if(ImageSpider_PrefService.prefHasUserValue("border_color"))
 	{
-	    var border_color= ImageSpider_PrefService.getComplexValue("border_color", Components.interfaces.nsISupportsString).data;
+	    var border_color = ImageSpider_PrefService.getComplexValue("border_color", Components.interfaces.nsISupportsString).data;
 	    document.getElementById("imageparams_border_color").color=border_color;
 	}
 	else
@@ -42,7 +42,7 @@ var spiderSettings=
 		
 	if(ImageSpider_PrefService.prefHasUserValue("border_tool_color"))
 	{
-	    var border_tool_color= ImageSpider_PrefService.getComplexValue("border_tool_color", Components.interfaces.nsISupportsString).data;
+	    var border_tool_color = ImageSpider_PrefService.getComplexValue("border_tool_color", Components.interfaces.nsISupportsString).data;
 	    document.getElementById("imageparams_border_tool_color").color=border_tool_color;
 	}
 	else
@@ -52,7 +52,7 @@ var spiderSettings=
 		
 	if(ImageSpider_PrefService.prefHasUserValue("font_size"))
 	{
-	    var font_size= ImageSpider_PrefService.getIntPref("font_size");
+	    var font_size = ImageSpider_PrefService.getIntPref("font_size");
 	    document.getElementById("imageparams_text_size").value=font_size;
 	}
 	else
@@ -62,7 +62,7 @@ var spiderSettings=
 		
 	if(ImageSpider_PrefService.prefHasUserValue("opacity"))
 	{
-	    var opacity= ImageSpider_PrefService.getIntPref("opacity");
+	    var opacity = ImageSpider_PrefService.getIntPref("opacity");
 	    document.getElementById("imageparams_text_opacity").value=opacity;
 	}
 	else
@@ -72,7 +72,7 @@ var spiderSettings=
 		
 	if(ImageSpider_PrefService.prefHasUserValue("for_borders"))
 	{
-	    var for_borders= ImageSpider_PrefService.getIntPref("for_borders");
+	    var for_borders = ImageSpider_PrefService.getIntPref("for_borders");
 	    document.getElementById("imageparams_for_borders").value=for_borders;
 	}
 	else

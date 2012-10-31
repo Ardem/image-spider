@@ -42,7 +42,10 @@ var imagepar=
 	{	
 	    if(ImageSpider_PrefService.getIntPref("spider_open")==1)
 	    {
-		document.getElementById("image-spider-navbar-button").image = "chrome://imageparams/skin/plaginnameactive.png";
+		var navbar_button = document.getElementById("image-spider-navbar-button");
+		if(navbar_button)
+		    navbar_button.image = "chrome://imageparams/skin/plaginnameactive.png";
+		
 		var is_opened = document.getElementById("imageparams_taskbar");
 		is_opened.setAttribute("checked", true);
 		imagepar.scan();
@@ -262,20 +265,23 @@ var imagepar=
     toggleImageparMenu: function ()
     { 		
 	var is_opened = document.getElementById("imageparams_taskbar");
+	var navbar_button = document.getElementById("image-spider-navbar-button");
 		
 	if(is_opened.getAttribute("checked")=="true")
 	{
 	    imagepar.remove();
 	    is_opened.setAttribute("checked", false);
 	    ImageSpider_PrefService.setIntPref("spider_open", 0);
-	    document.getElementById("image-spider-navbar-button").image = "chrome://imageparams/skin/plaginname.png";
+	    if(navbar_button)
+		navbar_button.image = "chrome://imageparams/skin/plaginname.png";
 	}
 	else
 	{
 	    imagepar.scan();
 	    is_opened.setAttribute("checked", true);
 	    ImageSpider_PrefService.setIntPref("spider_open", 1);
-	    document.getElementById("image-spider-navbar-button").image = "chrome://imageparams/skin/plaginnameactive.png";
+	    if(navbar_button)
+		navbar_button.image = "chrome://imageparams/skin/plaginnameactive.png";
 	}
     },
 	
