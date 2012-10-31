@@ -14,12 +14,12 @@
 		<description class="name">&imageparams.firstTitle;</description>
 	    </vbox>
 	    <vbox>
-		<description class="name">2.0.0</description>
+		<description class="name">2.0.1</description>
 	    </vbox>
 	</hbox>
 	<hbox class="title">
 	    <description value="&imageparams.about.date;:" class="title_name"/>
-	    <description class="date">30.11.2012</description>
+	    <description class="date">31.11.2012</description>
 	</hbox>
 	<hbox class="title">
 	    <description class="title_name" value="&imageparams.about.author;:"/>
