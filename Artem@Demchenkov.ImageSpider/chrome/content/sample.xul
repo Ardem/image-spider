@@ -30,7 +30,7 @@
 			  accesskey="&imageparams.view.key;"
 			  key="imageparams_key" 
 			  type="checkbox"
-			  oncommand="imagepar.toggleImagepar(this)"
+			  oncommand="imagepar.updateImageparPopUp(); imagepar.toggleImageparMenu();"
 						  />
 		<menuitem id="imageparams_settings" label="&imageparams.firstSettings;" oncommand="imagepar.settings()"/>
 		<menuitem id="imageparams_about" label="&imageparams.about;" oncommand="imagepar.about()"/>

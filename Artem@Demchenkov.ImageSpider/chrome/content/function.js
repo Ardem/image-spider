@@ -246,25 +246,7 @@ var imagepar=
 	window.openDialog("chrome://imageparams/content/settings/settings.xul", "imageparams_settings", "centerscreen,chrome,modal,resizable");
     },
 	
-    // run Image Spider from menu
-	
-    toggleImagepar: function (is_opened)
-    {
-	if(is_opened.getAttribute("checked"))
-	{
-	    imagepar.scan();
-	    ImageSpider_PrefService.setIntPref("spider_open", 1);
-	    document.getElementById("image-spider-navbar-button").image = "chrome://imageparams/skin/plaginnameactive.png";
-	}
-	else
-	{
-	    imagepar.remove();
-	    ImageSpider_PrefService.setIntPref("spider_open", 0);
-	    document.getElementById("image-spider-navbar-button").image = "chrome://imageparams/skin/plaginname.png";
-	}
-    },
-	
-    // run Image Spider from toolbar
+    // run Image Spider from toolbar or from menu
 	
     toggleImageparMenu: function ()
     { 		
