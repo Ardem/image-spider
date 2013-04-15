@@ -20,7 +20,7 @@ window.addEventListener("load", function() {
     imagepar.init();
 }, false);
 
-var imagepar=
+var imagepar =
 {
     // for all loading pages
 	
@@ -31,19 +31,17 @@ var imagepar=
     		Application.getExtensions(firstRun);
 
 	var appcontent = document.getElementById("appcontent");   // browser 
-	if(appcontent)  
+	if (appcontent)  
 	    appcontent.addEventListener("DOMContentLoaded", imagepar.onPageLoad, true);
     },  
   
     onPageLoad: function(aEvent) {  
-	var doc = aEvent.originalTarget; // doc is document that triggered "onload" event  
+	var doc       = aEvent.originalTarget; // doc is document that triggered "onload" event  
 	var is_opened = document.getElementById("imageparams_taskbar");
-	if(ImageSpider_PrefService.prefHasUserValue("spider_open"))
-	{	
-	    if(ImageSpider_PrefService.getIntPref("spider_open")==1)
-	    {
+	if (ImageSpider_PrefService.prefHasUserValue("spider_open")) {	
+	    if (ImageSpider_PrefService.getIntPref("spider_open")==1) {
 		var navbar_button = document.getElementById("image-spider-navbar-button");
-		if(navbar_button)
+		if (navbar_button)
 		    navbar_button.image = "chrome://imageparams/skin/plaginnameactive.png";
 		
 		var is_opened = document.getElementById("imageparams_taskbar");
@@ -66,20 +64,16 @@ var imagepar=
     {
 	var all_documents = new Array();
 
-	if(frame)
-	{
-	    var frames=frame.frames;
-	    var framesLength=frames.length;
+	if (frame) {
+	    var frames       = frame.frames;
+	    var framesLength = frames.length;
 
-	    if(frame.document)
-	    {
+	    if (frame.document)
 		all_documents.push(frame.document);
-	    }
 
-	    for(var i=0; i<framesLength; i++)
-	    {
+	    for (var i = 0; i < framesLength; i++)
 		all_documents = all_documents.concat(imagepar.documents(frames[i]));
-	    }
+		
 	}
 	
 	return all_documents;
@@ -91,16 +85,16 @@ var imagepar=
     {
 	var for_borders = (ImageSpider_PrefService.prefHasUserValue("for_borders")) ? ImageSpider_PrefService.getIntPref("for_borders") : 2;
 		
-	var content=imagepar.documents(window.top.getBrowser().selectedBrowser.contentWindow);
+	var content = imagepar.documents(window.top.getBrowser().selectedBrowser.contentWindow);
 		
-	for(var i=0; i<content.length; i++)
-	{
-	    for(var n=0; n<content[i].images.length; n++)
-	    {
+	for (var i = 0; i < content.length; i++) {
+	    for (var n = 0; n < content[i].images.length; n++) {
 		content[i].images[n].removeAttribute("onmouseover");
 		content[i].images[n].removeAttribute("onmousemove");
 		content[i].images[n].removeAttribute("onmouseout");
-		if(for_borders==2) content[i].images[n].style.border='none';
+		
+		if (for_borders == 2) 
+			content[i].images[n].style.border='none';
 	    }
 			
 	    var For_script = content[i].getElementById("thisIsOurScript");
@@ -115,22 +109,21 @@ var imagepar=
 	
     scan: function()
     {
-	var content=imagepar.documents(window.top.getBrowser().selectedBrowser.contentWindow);
+	var content = imagepar.documents(window.top.getBrowser().selectedBrowser.contentWindow);
 		
-	var font_color = (ImageSpider_PrefService.prefHasUserValue("text_color")) ? ImageSpider_PrefService.getComplexValue("text_color", Components.interfaces.nsISupportsString).data : "#000000";
-	var bg_color = (ImageSpider_PrefService.prefHasUserValue("bg_color")) ? ImageSpider_PrefService.getComplexValue("bg_color", Components.interfaces.nsISupportsString).data : "#f9fbdd";
-	var border_color = (ImageSpider_PrefService.prefHasUserValue("border_color")) ? ImageSpider_PrefService.getComplexValue("border_color", Components.interfaces.nsISupportsString).data : "#df0404";
+	var font_color        = (ImageSpider_PrefService.prefHasUserValue("text_color")) ? ImageSpider_PrefService.getComplexValue("text_color", Components.interfaces.nsISupportsString).data : "#000000";
+	var bg_color          = (ImageSpider_PrefService.prefHasUserValue("bg_color")) ? ImageSpider_PrefService.getComplexValue("bg_color", Components.interfaces.nsISupportsString).data : "#f9fbdd";
+	var border_color      = (ImageSpider_PrefService.prefHasUserValue("border_color")) ? ImageSpider_PrefService.getComplexValue("border_color", Components.interfaces.nsISupportsString).data : "#df0404";
 	var border_tool_color = (ImageSpider_PrefService.prefHasUserValue("border_tool_color")) ? ImageSpider_PrefService.getComplexValue("border_tool_color", Components.interfaces.nsISupportsString).data : "#000000";
-	var font_size = (ImageSpider_PrefService.prefHasUserValue("font_size")) ? ImageSpider_PrefService.getIntPref("font_size") : 11;
-	var opacity = (ImageSpider_PrefService.prefHasUserValue("opacity")) ? ImageSpider_PrefService.getIntPref("opacity") : 8;
-	var for_borders = (ImageSpider_PrefService.prefHasUserValue("for_borders")) ? ImageSpider_PrefService.getIntPref("for_borders") : 2;
+	var font_size         = (ImageSpider_PrefService.prefHasUserValue("font_size")) ? ImageSpider_PrefService.getIntPref("font_size") : 11;
+	var opacity           = (ImageSpider_PrefService.prefHasUserValue("opacity")) ? ImageSpider_PrefService.getIntPref("opacity") : 8;
+	var for_borders       = (ImageSpider_PrefService.prefHasUserValue("for_borders")) ? ImageSpider_PrefService.getIntPref("for_borders") : 2;
 		
-	for(var i=0; i<content.length; i++)
-	{
+	for (var i = 0; i < content.length; i++) {
 	    var For_style = content[i].createElement('style');
 	    content[i].body.appendChild(For_style);
 	    For_style.setAttribute("id", "thisIsOurStyle");
-	    For_style.innerHTML=" \
+	    For_style.innerHTML = " \
 				div.image_information{ \
 				padding:2px; \
 				-moz-opacity: 0."+opacity+"; \
@@ -151,7 +144,7 @@ var imagepar=
 	    var For_script = content[i].createElement('script');
 	    content[i].body.appendChild(For_script);
 	    For_script.setAttribute("id", "thisIsOurScript");
-	    var showFunction="\
+	    var showFunction = "\
 				divVis=0; \
 				ourAlt=''; \
 				ourTitle=''; \
@@ -234,18 +227,15 @@ var imagepar=
 				} \
 			";
 			
-	    For_script.innerHTML=showFunction;
+	    For_script.innerHTML = showFunction;
 			
-	    for(var n=0; n<content[i].images.length; n++)
-	    {
-		if(for_borders==2)
-		{
+	    for (var n = 0; n < content[i].images.length; n++) {
+		if (for_borders == 2) {
 		    content[i].images[n].style.border='1px solid '+border_color;
 		    content[i].images[n].setAttribute("onmouseover", "showThis(this, event);");
 		    content[i].images[n].setAttribute("onmouseout", "hideThis(this);");
 		}
-		else
-		{
+		else {
 		    content[i].images[n].setAttribute("onmouseover", "showThis(this, event); this.style.border='1px solid "+border_color+"';");
 		    content[i].images[n].setAttribute("onmouseout", "hideThis(this); this.style.border='none';");
 		}
@@ -264,23 +254,21 @@ var imagepar=
 	
     toggleImageparMenu: function ()
     { 		
-	var is_opened = document.getElementById("imageparams_taskbar");
+	var is_opened     = document.getElementById("imageparams_taskbar");
 	var navbar_button = document.getElementById("image-spider-navbar-button");
 		
-	if(is_opened.getAttribute("checked")=="true")
-	{
+	if (is_opened.getAttribute("checked") == true) {
 	    imagepar.remove();
 	    is_opened.setAttribute("checked", false);
 	    ImageSpider_PrefService.setIntPref("spider_open", 0);
-	    if(navbar_button)
+	    if (navbar_button)
 		navbar_button.image = "chrome://imageparams/skin/plaginname.png";
 	}
-	else
-	{
+	else {
 	    imagepar.scan();
 	    is_opened.setAttribute("checked", true);
 	    ImageSpider_PrefService.setIntPref("spider_open", 1);
-	    if(navbar_button)
+	    if (navbar_button)
 		navbar_button.image = "chrome://imageparams/skin/plaginnameactive.png";
 	}
     },
@@ -289,24 +277,20 @@ var imagepar=
 	
     updateImageparPopUp: function()
     {
-	var content=imagepar.documents(window.top.getBrowser().selectedBrowser.contentWindow);
-	var script_number=0;
+	var content       = imagepar.documents(window.top.getBrowser().selectedBrowser.contentWindow);
+	var script_number = 0;
 		
-	for(var i=0; i<content.length; i++)
-	{
-	    if(content[i].getElementById("thisIsOurScript"))
-	    {
-		script_number=script_number+1;
+	for (var i = 0; i < content.length; i++) {
+	    if (content[i].getElementById("thisIsOurScript")) {
+		script_number = script_number + 1;
 	    }
 	}
 		
-	if(script_number==0)
-	{
+	if (script_number == 0) {
 	    is_opened = document.getElementById("imageparams_taskbar");
 	    document.getElementById("imageparams_taskbar").setAttribute("checked", false);
 	}
-	else
-	{
+	else {
 	    is_opened = document.getElementById("imageparams_taskbar");
 	    document.getElementById("imageparams_taskbar").setAttribute("checked", true);
 	}
